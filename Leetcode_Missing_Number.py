@@ -10,15 +10,15 @@ so we are given an array containing n distinct numbers
 ranging from 0 to n (inclusive)
 we need to return the only number in the range that is missing from the array
 it is guaranteed that there is only one missing number
-so we could using pythonic ways to solve this
+so we could use pythonic ways to solve this
 but i wanted to be language agnostic
-i was like since the numbers are from 0 to n
-firstly, the range is always valid
-and secondly, we need to find the missing number in that range
+i was like since the numbers are from 0 to n (inclusive)
+first, the range is always valid
+and second, we need to find the missing number in that range
 so we can sum up all the numbers from 0 to n using the formula n * (n + 1) / 2
-you can use an array too but that would take more space
+you can use an array and sum too but that would take more space
 then we can sum up all the numbers in the given array
-finally, we can subtract the sum of the array from the expected sum
+finally, we can subtract the array sum from the expected sum
 the result will be the missing number
 
 
@@ -66,7 +66,8 @@ class Solution:
 
         # return expected_sum - array_sum
 
-        # time complexity of above is O(n) as well but it's actually O(2n)
+        # time complexity of above is O(n)  
+        # total time complexity is actually O(2n)
         # but per big O notation, it's still O(n)
         # however we use extra space for array_sum and expected_sum
 
