@@ -207,24 +207,11 @@ system > motivation.
 | platform      | solved | vibe check |
 | ------------- | ------ | ---------- |
 | geeksforgeeks | 3      | warming up |
-| leetcode      | 1      | we move    |
+| leetcode      | 2      | we move    |
 | hackerrank    | 0      | tbd        |
 | codeforces    | 0      | lol        |
 
 ## _last updated: 2026-01-29_
-
-## wanna help?
-
-this is my personal learning journey, but if you:
-
-- spot something painfully wrong
-- know a cleaner approach
-- want to share an “aha!” moment
-
-open an issue or a PR.  
-i’m here to learn, not to be right.
-
----
 
 _if you’re reading this, you’re probably grinding too._  
 _we’ll figure it out. eventually._
