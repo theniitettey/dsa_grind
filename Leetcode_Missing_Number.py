@@ -42,6 +42,12 @@ learned:
 - look at the problem to find the best time and space complexity
 - this ensures you know your code can't do better than this
 - and anything more than that is not optimal
+
+alternative:
+- XOR approach also achieves O(n) time and O(1) space
+- however, you need to understand bitwise operations for that
+- useful when overflow is a concern in some languages
+- but the sum approach is more intuitive for this problem
 """
 
 from typing import List
@@ -69,7 +75,8 @@ class Solution:
         # time complexity of above is O(n)  
         # total time complexity is actually O(2n)
         # but per big O notation, it's still O(n)
-        # however we use extra space for array_sum and expected_sum
+        # however we use extra space, i think... probably O(1) though
+        # correct me if i'm wrong
 
         # using the formula to calcaulate the expected sum
         expected_sum = n * (n + 1) // 2
@@ -89,8 +96,8 @@ class Solution:
         # ps: you can't do better than this in terms of time and space complexity      
         return expected_sum
 
-
-nums = list(map(int, input().split()))
-solution = Solution()
-result = solution.missing_number(nums)
-print(result)
+if __name__ == "__main__":
+    nums = list(map(int, input().split()))
+    solution = Solution()   
+    result = solution.missing_number(nums)
+    print(result)

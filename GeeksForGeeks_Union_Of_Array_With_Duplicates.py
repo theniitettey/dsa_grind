@@ -34,9 +34,9 @@ class Solution:
 
         return list(a_set.union(b_set))
 
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
-solution = Solution()
-result = solution.findUnion(a, b)
-print(result)
-
+if __name__ == "__main__":
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    solution = Solution()
+    result = solution.findUnion(a, b)
+    print(result)

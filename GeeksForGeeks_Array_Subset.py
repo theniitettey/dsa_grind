@@ -72,10 +72,12 @@ class Solution:
             a_dict[num] -= 1
         
         return True
-    
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
 
-solution = Solution()
-result = solution.isSubset(a, b)
-print(result)
+
+if __name__ == "__main__": 
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+
+    solution = Solution()
+    result = solution.isSubset(a, b)
+    print(result)
