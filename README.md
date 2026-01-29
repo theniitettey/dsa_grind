@@ -203,25 +203,14 @@ system > motivation.
 ---
 
 ## current stats (auto-updated, subject to emotional stability)
-
 | platform      | solved | vibe check |
 | ------------- | ------ | ---------- |
 | geeksforgeeks | 3      | warming up |
-| leetcode      | 1      | we move    |
-| hackerrank    | 0      | tbd        |
-| codeforces    | 0      | lol        |
+| leetcode     | 0      | scared     |
+| hackerrank   | 0      | tbd        |
+| codeforces   | 0      | lol        |
 
-## _last updated: 2026-01-29_
-
-## the honest truth
-
-- most solutions are in python (other languages when i’m feeling spicy)
-- some code is clean, some just… works
-- failures are documented — they teach the most
-- time/space complexity when i actually understand it (working on that)
-- lots of comments because future me will be confused
-- explanations are written so i can say them out loud in interviews
-
+_last updated: 2026-01-29_
 ---
 
 ## wanna help?
