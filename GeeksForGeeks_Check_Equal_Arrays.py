@@ -12,7 +12,9 @@ so i was like since the question says the arrays are equal if both contain the s
 i thought of using a dictionary to count the frequency of each element in the first array
 then i loop through the second array and decrease the frequency of each element found in the dictionary
 if an element is not found in the dictionary, we can return false right away, because that means the arrays are not equal, obviously
-then i realized i tried to do it by checking if a frequency becomes zero and trying to return false if an element is found again in the second array, but a cleaner way is to just delete the element from the dictionary when its frequency becomes zero, then our first condition will take care of it
+then i realized i tried to do it by checking if a frequency becomes zero and trying to return false if an element is found again in the second array 
+but a cleaner way is to just delete the element from the dictionary when its frequency becomes zero,
+then our first condition will take care of it
 finally, with my approach, if the dictionary is empty at the end, that means both arrays are equal, otherwise they are not
 so we just return if the dictionary is empty or not
 sigh...
