@@ -30,10 +30,10 @@ stop being terrible at this.
 
 **current platforms:**
 
-- **geeksforgeeks** — my current home base (warming up here)
-- **leetcode** — the final boss (loading…)
-- **hackerrank** — when i need variety
-- **codeforces** — when i’m feeling brave (or reckless)
+- **[geeksforgeeks](https://www.geeksforgeeks.org/)** — my current home base (warming up here)
+- **[leetcode](https://leetcode.com/)** — the final boss (loading…)
+- **[hackerrank](https://www.hackerrank.com/)** — when i need variety
+- **[codeforces](https://codeforces.com/)** — when i’m feeling brave (or reckless)
 
 no platform loyalty. only progress.
 
@@ -98,9 +98,9 @@ just what worked, what didn’t, and how long i stared at my screen.
 
 **what i’m running:**
 
-- python — because life is hard enough
-- vs code — the only editor i can configure without crying
-- competitive companion — actual cheat code
+- **[python](https://www.python.org/)** — because life is hard enough
+- **[vs code](https://code.visualstudio.com/)** — the only editor i can configure without crying
+- **[competitive companion](https://github.com/jmerle/competitive-companion)** — actual cheat code
 
 ### quick start
 
@@ -111,24 +111,107 @@ just what worked, what didn’t, and how long i stared at my screen.
 5. click the extension on any problem
 6. it opens in vs code → hit run → dopamine
 
-**about test cases:**
+---
 
-- competitive platforms (codeforces): auto-parsed
-- non-competitive (gfg, leetcode): custom tests i wrote
-- either way, i click run. things happen. life is good.
+## scripts & automation (yes, i really over-engineered this)
+
+this repo isn’t just a pile of `.py` files. there’s a small automation layer here whose only job is to **remove friction** and make progress visible.
+
+### `scripts/new_problem.py`
+
+creates a **ready-to-solve problem file** from a problem URL.
+
+**what it does:**
+
+- parses the problem URL (leetcode, gfg, hackerrank, codeforces)
+- infers the platform automatically
+- extracts the problem title
+- generates a clean filename like:
+
+```
+LeetCode_Find_Players_With_Zero_Or_One_Losses.py
+```
+
+- creates a snake_case function name
+- fills a standard `TEMPLATE.py`
+- wires up a runnable local test block
+
+**usage:**
+
+```bash
+python scripts/new_problem.py <problem_url>
+```
+
+no setup tax. just think.
 
 ---
 
-## current stats (subject to emotional stability)
+### `TEMPLATE.py`
+
+the blueprint every problem file starts from.
+
+**why it exists:**
+
+- keeps documentation consistent
+- forces me to think about complexity, edge cases, and takeaways
+- removes decision fatigue
+
+the generator:
+
+- fills metadata like `problem_link` and `created`
+- renames the `solve` function to match the problem title
+
+no imports.  
+no assumptions.  
+just structure.
+
+---
+
+### `scripts/update_stats.py`
+
+keeps the README honest.
+
+**what it does:**
+
+- scans the repo for solved problems using filename prefixes
+- counts solutions per platform
+- updates the **current stats** table
+- refreshes the “last updated” date
+
+**manual run:**
+
+```bash
+python scripts/update_stats.py
+```
+
+---
+
+### GitHub Actions (automatic stats updates)
+
+there’s a GitHub Actions workflow that runs on every push.
+
+**what it does:**
+
+- detects new commits
+- runs `scripts/update_stats.py`
+- updates the README automatically if stats changed
+
+so stats stay accurate **without me thinking about it**.
+
+system > motivation.
+
+---
+
+## current stats (auto-updated, subject to emotional stability)
+
 | platform      | solved | vibe check |
 | ------------- | ------ | ---------- |
 | geeksforgeeks | 3      | warming up |
-| leetcode     | 0      | scared     |
-| hackerrank   | 0      | tbd        |
-| codeforces   | 0      | lol        |
+| leetcode      | 1      | we move    |
+| hackerrank    | 0      | tbd        |
+| codeforces    | 0      | lol        |
 
-_last updated: 2026-01-29_
----
+## _last updated: 2026-01-29_
 
 ## the honest truth
 
