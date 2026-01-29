@@ -1,107 +1,141 @@
-# DSA Grind 💪
+# dsa grind 💪
 
-Just a guy trying not to suck at algorithms. This is my personal journey through the pain and occasional triumph of solving DSA problems.
+just documenting my journey from "what's a linked list?" to hopefully not embarrassing myself in technical interviews.
 
-## What's This?
+## the mission
 
-I'm grinding through problems from:
+grinding through problems because apparently "i'll figure it out on the job" isn't a valid interview strategy.
 
-- **GeeksForGeeks** - Because apparently I need more practice
-- **LeetCode** - The classic way to feel inadequate
-- **HackerRank** - More problems, more fun (more tears)
-- **Codeforces** - When I'm feeling particularly brave
+**current platforms:**
 
-The goal? Get better. Maybe land a decent job. Definitely become less terrible at this stuff.
+- **geeksforgeeks** - my current home (2 problems and counting)
+- **leetcode** - the final boss (coming soon™)
+- **hackerrank** - for when i need a change of scenery
+- **codeforces** - when i'm feeling brave (or stupid, same thing)
 
-## File Names (Because Organization Matters)
+**the goal?** get better. land a job. stop being terrible at this. in that order.
 
-Every solution follows this pattern:
+---
+
+## how i organize this chaos
+
+### file naming
 
 ```
 PlatformName_Question_Title.py
 ```
 
-Examples:
+**examples:**
 
 - `GeeksForGeeks_Union_Of_Array_With_Duplicates.py`
-- `LeetCode_Two_Sum.py` (if I ever get to it)
+- `LeetCode_Two_Sum.py` _(lol not yet)_
 - `HackerRank_Array_Manipulation.py`
-- `Codeforces_Beautiful_Matrix.py`
 
-## What's Inside Each Solution?
+clean, simple, searchable. no weird abbreviations that i'll forget in 2 weeks.
 
-Each file tracks my struggle with comprehensive metadata at the top:
+### inside each file
 
-**Tracking Metadata:**
+every solution comes with honest documentation at the top:
 
-- **time_spent** - How long I stared at my screen
-- **difficulty** - What the problem claims vs what I experienced
-- **topic** - What data structures/algorithms the problem covers
-- **problem_link** - Link to the actual problem
-- **tries** - How many times I failed before getting it right (no shame)
+```python
+"""
+time_spent: 2 minutes (or 2 hours, we track both)
+difficulty: easy (allegedly)
+topic: arrays, hashing, whatever torture device they're using
+problem_link: [the crime scene]
+tries: 1 (we count the Ls too, no shame)
 
-**documentation sections:**
+notes:
+my entire unfiltered thought process - the eureka moments,
+the dead ends, the "wait what?" realizations, all of it
 
-- **notes** - the struggles, tortures and pains i went through to solve it
-- **time_complexity** - algorithmic time complexity with explanation
-- **space_complexity** - memory usage analysis
-- **edge_cases_tested** - what edge cases i actually tested (empty inputs, duplicates, etc.)
-- **learned** - key takeaways and lessons learned from this problem
+time_complexity: O(n) hopefully, not O(n³)
+space_complexity: how much memory i'm burning
 
-Real talk: These numbers don't lie. Some "easy" problems took me way longer than I'd like to admit.
+edge_cases_tested:
+- empty arrays
+- duplicates
+- the obvious stuff i initially forgot
 
-## The Setup
+learned:
+what i actually took away from this mess
+"""
+```
 
-**What I'm using:**
-
-- Python (mostly, because life's too short for C++ pointers right now)
-- VS Code (the only IDE I can actually configure)
-- [Competitive Companion](https://marketplace.visualstudio.com/items?itemName=jmerle.competitive-companion) - This extension is a lifesaver
-
-**How to use this repo:**
-
-1. Install Python (3.7+), VS Code, and the Competitive Companion extension
-2. Grab the [Competitive Companion browser extension](https://github.com/jmerle/competitive-companion)
-3. Click the extension icon on any problem and boom - it's in your IDE
-4. Hit run in VS Code using the extension (no terminal gymnastics needed)
-
-**The test case situation:**
-
-- Competitive platforms (Codeforces) parse test cases automatically
-- For non-competitive sites (GeeksForGeeks, LeetCode, HackerRank), I wrote custom test cases
-- Either way, when you open a problem with the extension, tests just show up ready to run
-
-## Current Stats
-
-| Platform      | Problems Solved | Ego Status  |
-| ------------- | --------------- | ----------- |
-| GeeksForGeeks | 2               | Fragile     |
-| LeetCode      | 0               | Nonexistent |
-| HackerRank    | 0               | TBD         |
-| Codeforces    | 0               | Wishful     |
-
-_These numbers will (hopefully) go up..._
-
-## The Brutal Truth
-
-- Most solutions are in Python
-- Some might be in other languages if I'm feeling adventurous
-- Comments explain my thought process (and mistakes)
-- Time/space complexity noted when I actually understand it
-- Some solutions are elegant, others... work
-
-## Useful Links
-
-- [GeeksForGeeks](https://www.geeksforgeeks.org/)
-- [LeetCode](https://leetcode.com/)
-- [HackerRank](https://www.hackerrank.com/)
-- [Codeforces](https://codeforces.com/)
-- [Competitive Companion](https://github.com/jmerle/competitive-companion) - Seriously, install this
-
-## Contributing
-
-This is my personal learning journey, but if you spot something horrifically wrong or have a better approach, feel free to open an issue or PR. I'm here to learn, not to be right.
+no corporate speak. no fake motivation. just honest tracking of what worked, what didn't, and how long i stared at my screen.
 
 ---
 
-_If you're reading this, you're probably also grinding. Good luck, we got this! 🚀_
+## the setup
+
+**what i'm running:**
+
+- **python** (mostly, because life's too short for segmentation faults)
+- **vs code** (the only ide i can configure without crying)
+- **competitive companion** - absolute game changer, seriously
+
+**quick start:**
+
+1. install python 3.7+
+2. grab vs code
+3. install [competitive companion](https://marketplace.visualstudio.com/items?itemName=jmerle.competitive-companion) in vs code
+4. install the [browser extension](https://github.com/jmerle/competitive-companion)
+5. click extension icon on any problem → automatically opens in vs code
+6. hit run, no terminal gymnastics needed
+
+**about test cases:**
+
+- competitive platforms (codeforces): auto-parsed
+- non-competitive (geeksforgeeks, leetcode): custom test cases i wrote
+- either way, the extension handles it. just click and run.
+
+---
+
+## current stats
+
+| platform      | solved | vibe check            |
+| ------------- | ------ | --------------------- |
+| geeksforgeeks | 2      | cautiously optimistic |
+| leetcode      | 0      | scared                |
+| hackerrank    | 0      | tbd                   |
+| codeforces    | 0      | lol                   |
+
+_last updated: when i last had the courage to count_
+
+---
+
+## the honest truth
+
+- most solutions are in python (other languages when i'm feeling spicy)
+- some code is elegant, some just... works
+- i document my failures too - they're the best teachers
+- time/space complexity when i actually understand it (working on this)
+- lots of comments because future me will have no idea what current me was thinking
+
+---
+
+## useful links
+
+- [geeksforgeeks](https://www.geeksforgeeks.org/) - where the grind happens
+- [leetcode](https://leetcode.com/) - coming soon to a breakdown near you
+- [hackerrank](https://www.hackerrank.com/) - variety is the spice of suffering
+- [codeforces](https://codeforces.com/) - for the brave
+- [competitive companion](https://github.com/jmerle/competitive-companion) - install this, trust me
+
+---
+
+## wanna help?
+
+this is my personal learning journey, but if you:
+
+- spot something tragically wrong
+- have a cleaner approach
+- want to share your own "aha!" moment
+
+feel free to open an issue or pr. i'm here to learn, not to be right.
+
+---
+
+_if you're reading this, you're probably grinding too. we got this. 🚀_
+
+_ps: that "sigh..." in my code comments? yeah, that's the real mood._
