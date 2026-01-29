@@ -30,14 +30,23 @@ Examples:
 
 ## What's Inside Each Solution?
 
-Each file tracks my struggle with these stats:
+Each file tracks my struggle with comprehensive metadata at the top:
+
+**Tracking Metadata:**
 
 - **time_spent** - How long I stared at my screen
 - **difficulty** - What the problem claims vs what I experienced
-- **topic** - What topics i `think` the problem covers
-- **problem_link** - a link to the problem
+- **topic** - What data structures/algorithms the problem covers
+- **problem_link** - Link to the actual problem
 - **tries** - How many times I failed before getting it right (no shame)
-- **NOTES** - the struggles, tortures and pains i had to go through to solve a problem
+
+**documentation sections:**
+
+- **notes** - the struggles, tortures and pains i went through to solve it
+- **time_complexity** - algorithmic time complexity with explanation
+- **space_complexity** - memory usage analysis
+- **edge_cases_tested** - what edge cases i actually tested (empty inputs, duplicates, etc.)
+- **learned** - key takeaways and lessons learned from this problem
 
 Real talk: These numbers don't lie. Some "easy" problems took me way longer than I'd like to admit.
 

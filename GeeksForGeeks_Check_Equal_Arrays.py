@@ -1,11 +1,11 @@
 """
 time_spent: 2 minutes (took a wild guess and it worked, apparently)
-difficulty: EASY
-topic: ARRAYS, HASHING, DICTIONARIES
+difficulty: easy
+topic: arrays, hashing, dictionaries
 problem_link: https://www.geeksforgeeks.org/problems/check-if-two-arrays-are-equal-or-not3847/1
 tries: 1
 
-NOTES:
+notes:
 i thought of sorting both arrays and comparing them but that would take O(n log n) time, 
 too much time in my opinion for this problem
 i tried to think of a way to do it without using extra space but i couldn't come up with anything, 
@@ -24,6 +24,20 @@ finally, with my approach, if the dictionary is empty at the end, that means bot
 otherwise they are not
 so we just return if the dictionary is empty or not
 sigh...
+
+time_complexity: O(n + m) where n = len(a), m = len(b)
+space_complexity: O(n) for the dictionary storage
+
+edge_cases_tested:
+- empty arrays
+- arrays of different lengths
+- arrays with duplicate elements
+- arrays with completely different elements
+
+learned:
+- deleting from dict while iterating is cleaner than tracking zero frequencies
+- get() method is handy for default values
+- checking if dict is empty is easier than counting remaining elements
 """
 
 class Solution:
