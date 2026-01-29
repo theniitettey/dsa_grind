@@ -10,6 +10,7 @@ permissions:
 jobs:
   update-stats:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -22,7 +23,11 @@ jobs:
       - name: Run stats updater
         run: python scripts/update_stats.py
 
-      - name: Commit and push if README changed
+      - name: Format README (Prettier)
+        run: |
+          npx prettier@3 --write README.md
+
+      - name: Commit and push if changed
         run: |
           if git diff --quiet; then
             echo "No changes to commit."
