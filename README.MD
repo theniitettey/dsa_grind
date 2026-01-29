@@ -93,12 +93,12 @@ no corporate speak. no fake motivation. just honest tracking of what worked, wha
 
 ## current stats
 
-| platform      | solved | vibe check            |
-| ------------- | ------ | --------------------- |
-| geeksforgeeks | 2      | cautiously optimistic |
-| leetcode      | 0      | scared                |
-| hackerrank    | 0      | tbd                   |
-| codeforces    | 0      | lol                   |
+| platform      | solved | vibe check  |
+| ------------- | ------ | ----------- |
+| geeksforgeeks | 3      | interesting |
+| leetcode      | 0      | scared      |
+| hackerrank    | 0      | tbd         |
+| codeforces    | 0      | lol         |
 
 _last updated: when i last had the courage to count_
 
