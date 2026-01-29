@@ -46,7 +46,7 @@ ALLOWED_EXTS = ("py", "js", "ts", "cpp", "java", "go", "rs")
 
 # File pattern: PlatformName_Anything.ext
 FILE_RE = re.compile(
-    rf"^(?P<platform>{'|'.join(map(re.escape, PLATFORM_MAP.keys()))})_.+\.({ '|'.join(ALLOWED_EXTS) })$"
+    rf"^(?P<platform>{'|'.join(map(re.escape, PLATFORM_MAP.keys()))})_.+\.({'|'.join(ALLOWED_EXTS)})$"
 )
 
 # Replace everything inside:
