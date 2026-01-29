@@ -12,19 +12,16 @@ basically we convert both arrays to sets to remove duplicates
 then the set union method is used to find the union of both sets, this is inbuilt in python which makes it easy
 finally we convert the result back to a list and return it
 """
-
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
-
 class Solution:
     def findUnion(self, a, b):
         a_set = set(a)
         b_set = set(b)
 
         return list(a_set.union(b_set))
-    
+
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 solution = Solution()
 result = solution.findUnion(a, b)
 print(result)
-    
 
