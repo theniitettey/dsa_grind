@@ -66,7 +66,7 @@ Real talk: These numbers don't lie. Some "easy" problems took me way longer than
 
 | Platform      | Problems Solved | Ego Status  |
 | ------------- | --------------- | ----------- |
-| GeeksForGeeks | 1               | Fragile     |
+| GeeksForGeeks | 2               | Fragile     |
 | LeetCode      | 0               | Nonexistent |
 | HackerRank    | 0               | TBD         |
 | Codeforces    | 0               | Wishful     |
