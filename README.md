@@ -5,7 +5,7 @@
 | Platform          | Solved | Easy | Medium | Hard | Avg Time | Avg Tries | Vibe       |
 | :---------------- | :----: | :--: | :----: | :--: | :------: | :-------: | :--------- |
 | **GeeksForGeeks** |   3    |  3   |   0    |  0   |    2m    |    1.0    | warming up |
-| **LeetCode**      |   3    |  2   |   1    |  0   |    1m    |    1.0    | warming up |
+| **LeetCode**      |   4    |  3   |   1    |  0   |    1m    |    1.0    | warming up |
 | **HackerRank**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
 | **Codeforces**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
 
