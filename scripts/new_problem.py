@@ -14,8 +14,10 @@ from __future__ import annotations
 
 import re
 import sys
-from datetime import datetime, timezone
+import json
+import hashlib
 from pathlib import Path
+from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -97,9 +99,35 @@ def to_filename(platform: str, title_slug: str, ext: str = "py") -> str:
     return f"{platform}_{safe}.{ext}"
 
 
+def create_cph_file(problem_path: Path) -> Path:
+    """Create .cph file with relative path (.\\filename format)."""
+    cph_dir = REPO_ROOT / ".cph"
+    cph_dir.mkdir(parents=True, exist_ok=True)
+
+    rel_path = f".\\{problem_path.name}"
+    digest = hashlib.md5(problem_path.name.encode("utf-8")).hexdigest()
+    cph_path = cph_dir / f".{problem_path.name}_{digest}.prob"
+
+    payload = {
+        "name": f"Local: {problem_path.stem}",
+        "url": rel_path,
+        "tests": [],
+        "interactive": False,
+        "memoryLimit": 1024,
+        "timeLimit": 3000,
+        "srcPath": rel_path,
+        "group": "local",
+        "local": True,
+    }
+
+    cph_path.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+    return cph_path
+
+
 def ensure_unique(path: Path) -> Path:
     if not path.exists():
         return path
+
     stem, suffix = path.stem, path.suffix
     i = 2
     while True:
@@ -162,6 +190,9 @@ def main() -> None:
     target.write_text(template, encoding="utf-8")
     print(f"✅ Created: {target.relative_to(REPO_ROOT)}")
     print(f"🔧 Function name: {function_name}()")
+
+    cph_path = create_cph_file(target)
+    print(f"🧩 Created .cph file: {cph_path.relative_to(REPO_ROOT)}")
 
     # open the file in IDE, vs code, or default editor
     # using code command if available, else webbrowser module

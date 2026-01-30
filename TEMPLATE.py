@@ -37,6 +37,19 @@ class Solution:
 
 
 if __name__ == "__main__":
-    solution = Solution()
-    result = solution.solve(*args, **kwargs)
-    print(result)
+    # Read input from stdin
+    try:
+        input_line = input().strip()
+        if input_line:
+            # Try to parse as integers or strings based on content
+            try:
+                args = list(map(int, input_line.split()))
+            except ValueError:
+                args = input_line.split()
+            
+            solution = Solution()
+            result = solution.solve(args)
+            if result is not None:
+                print(result)
+    except EOFError:
+        pass

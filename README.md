@@ -1,14 +1,26 @@
-<!-- GRIND_BADGES -->
+![Solved](https://img.shields.io/badge/Solved-8-blue?style=for-the-badge) ![Streak](https://img.shields.io/badge/Streak-2%20Days-orange?style=for-the-badge) ![Time Spent](https://img.shields.io/badge/Time%20Spent-17m-success?style=for-the-badge)
 
 ## current stats
 
-<!-- GRIND_STATS_TABLE -->
+| Platform          | Solved | Easy | Medium | Hard | Avg Time | Avg Tries | Vibe       |
+| :---------------- | :----: | :--: | :----: | :--: | :------: | :-------: | :--------- |
+| **GeeksForGeeks** |   3    |  3   |   0    |  0   |    2m    |    1.0    | warming up |
+| **LeetCode**      |   5    |  4   |   1    |  0   |    1m    |    1.0    | warming up |
+| **HackerRank**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
+| **Codeforces**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
 
 ### topics covered
 
-<!-- GRIND_TOPICS -->
+- **arrays** (5)
+- **dictionaries** (4)
+- **array** (3)
+- **hashing** (3)
+- **sets** (2)
+- **hash map** (1)
+- **math** (1)
+- **voting algorithm** (1)
 
-## _last updated: <!-- GRIND_TIMESTAMP -->_
+## _last updated: 2026-01-30_
 
 ---
 
@@ -102,12 +114,65 @@ keeps the README honest.
 - counts solutions per platform
 - updates the **current stats** table
 - refreshes the “last updated” date
+- normalizes `.cph` file paths to relative format (`.\\filename.py`)
 
 **manual run:**
 
 ```bash
 python scripts/update_stats.py
 ```
+
+### `scripts/new_problem.py`
+
+scaffolds new problem files with one command.
+
+**what it does:**
+
+- extracts problem title and platform from URL
+- generates filename following naming convention
+- fills in metadata (link, created date, function name)
+- creates `.cph` file for CP Helper integration
+- opens the file in VS Code automatically
+
+**usage:**
+
+```bash
+python scripts/new_problem.py <url> [--ext py]
+```
+
+**example:**
+
+```bash
+python scripts/new_problem.py https://leetcode.com/problems/two-sum/
+```
+
+outputs:
+
+- `LeetCode_Two_Sum.py` (templated solution file)
+- `.cph/.LeetCode_Two_Sum.py_<hash>.prob` (CP Helper metadata)
+
+### `scripts/init_grind.py`
+
+initializes `config/grind.json` with your settings.
+
+**what it does:**
+
+- auto-detects your name from git config
+- prompts you to choose: use defaults or enter details manually
+- saves user config for README customization
+
+**usage:**
+
+```bash
+python scripts/init_grind.py
+```
+
+**options:**
+
+- **[1] Use defaults** — auto-detected from git config (fastest)
+- **[2] Enter details** — prompt for name and GitHub username
+
+you can always edit `config/grind.json` later to update settings.
 
 ### GitHub Actions (automatic stats updates)
 
@@ -203,10 +268,22 @@ the script saves optimization data so it doesn't have to rescan everything:
 
 these get replaced when you run `python scripts/update_stats.py`:
 
-- `<!-- GRIND_BADGES -->` → badges
-- `<!-- GRIND_STATS_TABLE -->` → platform stats table
-- `<!-- GRIND_TOPICS -->` → topics list
-- `<!-- GRIND_TIMESTAMP -->` → last update date
+- `![Solved](https://img.shields.io/badge/Solved-8-blue?style=for-the-badge) ![Streak](https://img.shields.io/badge/Streak-2%20Days-orange?style=for-the-badge) ![Time Spent](https://img.shields.io/badge/Time%20Spent-17m-success?style=for-the-badge)` → badges
+- | `                 | Platform | Solved | Easy | Medium | Hard | Avg Time | Avg Tries  | Vibe                     |
+  | :---------------- | :------: | :----: | :--: | :----: | :--: | :------: | :--------- | ------------------------ |
+  | **GeeksForGeeks** |    3     |   3    |  0   |   0    |  2m  |   1.0    | warming up |
+  | **LeetCode**      |    5     |   4    |  1   |   0    |  1m  |   1.0    | warming up |
+  | **HackerRank**    |    0     |   0    |  0   |   0    |  -   |    -     | ghost town |
+  | **Codeforces**    |    0     |   0    |  0   |   0    |  -   |    -     | ghost town | ` → platform stats table |
+- `- **arrays** (5)
+- **dictionaries** (4)
+- **array** (3)
+- **hashing** (3)
+- **sets** (2)
+- **hash map** (1)
+- **math** (1)
+- **voting algorithm** (1)` → topics list
+- `2026-01-30` → last update date
 
 so you can write whatever you want in the README, and only the stats get auto-updated.
 

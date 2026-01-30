@@ -20,6 +20,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta, date
 from pathlib import Path
 from typing import NamedTuple, Optional, List, Dict
+from urllib.parse import urlparse
 
 # --------------------------------------------------
 # Paths
@@ -46,7 +47,6 @@ def load_config() -> dict:
                 "title": "dsa grind 💪",
                 "show_badges": True,
                 "show_stats_table": True,
-                "show_topics": True,
                 "show_streak": True,
                 "platforms": ["GeeksForGeeks", "LeetCode", "HackerRank", "Codeforces"],
                 "badge_style": "for-the-badge",
@@ -210,6 +210,58 @@ def scan_problems() -> List[Problem]:
         if prob:
             problems.append(prob)
     return problems
+
+def normalize_cph_paths(problems: List[Problem]) -> int:
+    """Normalize .cph .prob url/srcPath to relative paths (.\\filename format)."""
+    cph_dir = REPO_ROOT / ".cph"
+    if not cph_dir.exists():
+        return 0
+
+    filename_to_rel = {}
+    for p in problems:
+        rel_path = f".\\{p.filename}"
+        filename_to_rel[p.filename] = rel_path
+        filename_to_rel[p.filename.lower()] = rel_path
+
+    updated = 0
+    for prob_file in cph_dir.glob("*.prob"):
+        try:
+            data = json.loads(prob_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        def normalize_path(value: str) -> Optional[str]:
+            if not value:
+                return None
+            name = None
+            if value.startswith("file:"):
+                try:
+                    parsed = urlparse(value)
+                    name = Path(parsed.path).name
+                except Exception:
+                    name = None
+            if not name:
+                name = Path(value).name
+            if name in filename_to_rel:
+                return filename_to_rel[name]
+            if name.lower() in filename_to_rel:
+                return filename_to_rel[name.lower()]
+            return None
+
+        changed = False
+        if isinstance(data, dict):
+            for key in ("url", "srcPath"):
+                if key in data and isinstance(data[key], str):
+                    new_val = normalize_path(data[key])
+                    if new_val and data[key] != new_val:
+                        data[key] = new_val
+                        changed = True
+
+        if changed:
+            prob_file.write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+            updated += 1
+
+    return updated
 
 # --------------------------------------------------
 # Stats Calculation
@@ -439,4 +491,7 @@ def update_readme(problems: List[Problem], config: dict):
 if __name__ == "__main__":
     config = load_config()
     probs = scan_problems()
+    cph_updated = normalize_cph_paths(probs)
     update_readme(probs, config)
+    if cph_updated:
+        print(f"🔧 Updated {cph_updated} .cph file(s) to use configured paths")
