@@ -163,6 +163,24 @@ def main() -> None:
     print(f"✅ Created: {target.relative_to(REPO_ROOT)}")
     print(f"🔧 Function name: {function_name}()")
 
+    # open the file in IDE, vs code, or default editor
+    # using code command if available, else webbrowser module
+    try:
+        import subprocess
+        print("Opening the file...")
+        subprocess.run(["code", str(target)], shell=True, check=True)
+        print("✅ Opened in VS Code.")
+    except Exception as e:
+        print(f"⚠️ Could not open in VS Code: {e}")
+        try:
+            import webbrowser
+            print("Opening the file in the default editor...")
+            webbrowser.open(str(target))
+            print("✅ Opened in the default editor.")
+        except Exception as e:
+            print(f"⚠️ Could not open the file automatically: {e}")
+            print(f"Please open {target} manually.")
+
 
 if __name__ == "__main__":
     main()
