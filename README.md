@@ -207,13 +207,11 @@ system > motivation.
 | platform      | solved | vibe check |
 | ------------- | ------ | ---------- |
 | geeksforgeeks | 3      | warming up |
-| leetcode      | 2      | we move    |
+| leetcode      | 3      | we move    |
 | hackerrank    | 0      | tbd        |
 | codeforces    | 0      | lol        |
 
-## _last updated: 2026-01-29_
-
----
+## _last updated: 2026-01-30_
 
 _if you’re reading this, you’re probably grinding too._  
 _we’ll figure it out. eventually._
