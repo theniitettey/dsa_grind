@@ -213,6 +213,8 @@ system > motivation.
 
 ## _last updated: 2026-01-29_
 
+---
+
 _if you’re reading this, you’re probably grinding too._  
 _we’ll figure it out. eventually._
 
