@@ -1,0 +1,64 @@
+{
+  "user": {
+    "name": "Michael Perry Tettey",
+    "github_username": "theniitettey"
+  },
+  "readme": {
+    "title": "dsa grind 💪",
+    "show_badges": true,
+    "show_stats_table": true,
+    "show_topics": true,
+    "show_streak": true,
+    "platforms": [
+      "GeeksForGeeks",
+      "LeetCode",
+      "HackerRank",
+      "Codeforces"
+    ],
+    "badge_style": "for-the-badge",
+    "topic_filters": {
+      "exclude": [
+        "?",
+        "misc"
+      ],
+      "min_count": 1
+    }
+  },
+  "optimization": {
+    "last_update": "2026-01-30",
+    "total_files_scanned": 8,
+    "cache": {
+      "total_solved": 8,
+      "total_time_mins": 17,
+      "current_streak": 2,
+      "topics": {
+        "arrays": 5,
+        "hashing": 3,
+        "dictionaries": 4,
+        "sets": 2,
+        "array": 3,
+        "hash map": 1,
+        "voting algorithm": 1,
+        "math": 1
+      }
+    }
+  },
+  "stats": {
+    "total_solved": 8,
+    "platforms": {
+      "GeeksForGeeks": {
+        "count": 3,
+        "easy": 3,
+        "medium": 0,
+        "hard": 0
+      },
+      "LeetCode": {
+        "count": 5,
+        "easy": 4,
+        "medium": 1,
+        "hard": 0
+      }
+    },
+    "last_scan_timestamp": "2026-01-30"
+  }
+}

@@ -1,13 +1,24 @@
-![Solved](https://img.shields.io/badge/Solved-6-blue?style=for-the-badge) ![Streak](https://img.shields.io/badge/Streak-2%20Days-orange?style=for-the-badge) ![Time Spent](https://img.shields.io/badge/Time%20Spent-13m-success?style=for-the-badge)
+![Solved](https://img.shields.io/badge/Solved-8-blue?style=for-the-badge) ![Streak](https://img.shields.io/badge/Streak-2%20Days-orange?style=for-the-badge) ![Time Spent](https://img.shields.io/badge/Time%20Spent-17m-success?style=for-the-badge)
 
 ## current stats
 
 | Platform          | Solved | Easy | Medium | Hard | Avg Time | Avg Tries | Vibe       |
 | :---------------- | :----: | :--: | :----: | :--: | :------: | :-------: | :--------- |
 | **GeeksForGeeks** |   3    |  3   |   0    |  0   |    2m    |    1.0    | warming up |
-| **LeetCode**      |   4    |  3   |   1    |  0   |    1m    |    1.0    | warming up |
+| **LeetCode**      |   5    |  4   |   1    |  0   |    1m    |    1.0    | warming up |
 | **HackerRank**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
 | **Codeforces**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
+
+### topics covered
+
+- **arrays** (5)
+- **dictionaries** (4)
+- **array** (3)
+- **hashing** (3)
+- **sets** (2)
+- **hash map** (1)
+- **math** (1)
+- **voting algorithm** (1)
 
 ## _last updated: 2026-01-30_
 
@@ -217,6 +228,95 @@ there’s a GitHub Actions workflow that runs on every push.
 so stats stay accurate **without me thinking about it**.
 
 system > motivation.
+
+</details>
+
+---
+
+<details>
+<summary><strong>configuration (grind.json)</strong></summary>
+
+the `grind.json` file lets you customize how your README looks and stores optimization data.
+
+### quick settings
+
+**customize your name:**
+
+```json
+{
+  "user": {
+    "name": "Your Name",
+    "github_username": "yourusername"
+  }
+}
+```
+
+**toggle what shows up:**
+
+```json
+{
+  "readme": {
+    "show_badges": true, // badges at the top
+    "show_stats_table": true, // platform stats table
+    "show_topics": true, // topics breakdown
+    "show_streak": true // streak badge
+  }
+}
+```
+
+**change badge style:**
+
+```json
+{
+  "readme": {
+    "badge_style": "for-the-badge" // or "flat", "flat-square", etc.
+  }
+}
+```
+
+**filter topics:**
+
+```json
+{
+  "readme": {
+    "topic_filters": {
+      "exclude": ["?", "misc"], // skip these topics
+      "min_count": 1 // only show topics with X+ problems
+    }
+  }
+}
+```
+
+**reorder platforms:**
+
+```json
+{
+  "readme": {
+    "platforms": ["LeetCode", "GeeksForGeeks", "HackerRank", "Codeforces"]
+  }
+}
+```
+
+### what gets stored
+
+the script saves optimization data so it doesn't have to rescan everything:
+
+- `optimization.cache` — cached stats (solved count, time, streak, topics)
+- `stats.platforms` — breakdown by platform (count, easy/medium/hard)
+- `optimization.last_update` — when stats were last updated
+
+### placeholders in README
+
+these get replaced when you run `python scripts/update_stats.py`:
+
+- `<!-- GRIND_BADGES -->` → badges
+- `<!-- GRIND_STATS_TABLE -->` → platform stats table
+- `<!-- GRIND_TOPICS -->` → topics list
+- `<!-- GRIND_TIMESTAMP -->` → last update date
+
+so you can write whatever you want in the README, and only the stats get auto-updated.
+
+no more manual counting. no more stale stats.
 
 </details>
 
