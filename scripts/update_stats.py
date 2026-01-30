@@ -27,7 +27,7 @@ from typing import NamedTuple, Optional, List, Dict
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 README = REPO_ROOT / "README.md"
-CONFIG_FILE = REPO_ROOT / "grind.json"
+CONFIG_FILE = REPO_ROOT / "config" / "grind.json"
 
 # --------------------------------------------------
 # Config Management
@@ -79,6 +79,7 @@ def load_config() -> dict:
 
 def save_config(config: dict) -> None:
     """Save configuration to grind.json"""
+    CONFIG_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
 

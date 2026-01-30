@@ -1,26 +1,14 @@
-![Solved](https://img.shields.io/badge/Solved-8-blue?style=for-the-badge) ![Streak](https://img.shields.io/badge/Streak-2%20Days-orange?style=for-the-badge) ![Time Spent](https://img.shields.io/badge/Time%20Spent-17m-success?style=for-the-badge)
+<!-- GRIND_BADGES -->
 
 ## current stats
 
-| Platform          | Solved | Easy | Medium | Hard | Avg Time | Avg Tries | Vibe       |
-| :---------------- | :----: | :--: | :----: | :--: | :------: | :-------: | :--------- |
-| **GeeksForGeeks** |   3    |  3   |   0    |  0   |    2m    |    1.0    | warming up |
-| **LeetCode**      |   5    |  4   |   1    |  0   |    1m    |    1.0    | warming up |
-| **HackerRank**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
-| **Codeforces**    |   0    |  0   |   0    |  0   |    -     |     -     | ghost town |
+<!-- GRIND_STATS_TABLE -->
 
 ### topics covered
 
-- **arrays** (5)
-- **dictionaries** (4)
-- **array** (3)
-- **hashing** (3)
-- **sets** (2)
-- **hash map** (1)
-- **math** (1)
-- **voting algorithm** (1)
+<!-- GRIND_TOPICS -->
 
-## _last updated: 2026-01-30_
+## _last updated: <!-- GRIND_TIMESTAMP -->_
 
 ---
 
@@ -82,100 +70,6 @@ examples:
 
 - `GeeksForGeeks_Union_Of_Array_With_Duplicates.py`
 - `LeetCode_Two_Sum.py` (soon™)
-- `HackerRank_Array_Manipulation.py`
-
-simple. searchable. future-me friendly.  
-no cryptic abbreviations i’ll forget in two weeks.
-
-### inside each file
-
-every solution starts with honest documentation:
-
-```
-time_spent: 2 minutes (or 2 hours — both count)
-difficulty: easy (allegedly)
-topic: arrays, hashing, whatever torture device this is
-problem_link: [the crime scene]
-tries: 1 (Ls are tracked too, no shame)
-
-notes:
-my unfiltered thought process —
-dead ends, breakthroughs, “wait… what?” moments
-
-time_complexity: O(n) hopefully, not O(n³)
-space_complexity: how much memory i’m burning
-
-edge_cases_tested:
-- empty inputs
-- duplicates
-- the obvious thing i somehow missed
-
-learned:
-what actually stuck after solving it
-
-alternatives:
-other approaches, when they exist
-```
-
-no corporate speak.  
-no fake motivation.  
-just what worked, what didn’t, and how long i stared at my screen.
-
-</details>
-
----
-
-<details>
-<summary><strong>the setup</strong></summary>
-
-**what i’m running:**
-
-- **[python](https://www.python.org/)** — because life is hard enough
-- **[vs code](https://code.visualstudio.com/)** — the only editor i can configure without crying
-- **[competitive companion](https://github.com/jmerle/competitive-companion)** — actual cheat code
-
-### quick start
-
-1. install python 3.7+
-2. install vs code
-3. install competitive companion (vs code extension)
-4. install the browser extension
-5. click the extension on any problem
-6. it opens in vs code → hit run → dopamine
-
-</details>
-
----
-
-<details>
-<summary><strong>scripts & automation (yes, i really over-engineered this)</strong></summary>
-
-this repo isn’t just a pile of `.py` files. there’s a small automation layer here whose only job is to **remove friction** and make progress visible.
-
-### `scripts/new_problem.py`
-
-creates a **ready-to-solve problem file** from a problem URL.
-
-**what it does:**
-
-- parses the problem URL (leetcode, gfg, hackerrank, codeforces)
-- infers the platform automatically
-- extracts the problem title
-- generates a clean filename like:
-
-```
-LeetCode_Find_Players_With_Zero_Or_One_Losses.py
-```
-
-- creates a snake_case function name
-- fills a standard `TEMPLATE.py`
-- wires up a runnable local test block
-
-**usage:**
-
-```bash
-python scripts/new_problem.py <problem_url>
-```
 
 no setup tax. just think.
 
