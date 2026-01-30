@@ -1,4 +1,17 @@
-# dsa grind 💪
+![Solved](https://img.shields.io/badge/Solved-6-blue?style=for-the-badge) ![Streak](https://img.shields.io/badge/Streak-2%20Days-orange?style=for-the-badge) ![Time Spent](https://img.shields.io/badge/Time%20Spent-13m-success?style=for-the-badge)
+
+## current stats
+
+| Platform | Solved | Easy | Medium | Hard | Avg Time | Avg Tries | Vibe |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **GeeksForGeeks** | 3 | 3 | 0 | 0 | 2m | 1.0 | warming up |
+| **LeetCode** | 3 | 2 | 1 | 0 | 1m | 1.0 | warming up |
+| **HackerRank** | 0 | 0 | 0 | 0 | - | - | ghost town |
+| **Codeforces** | 0 | 0 | 0 | 0 | - | - | ghost town |
+
+## _last updated: 2026-01-30_
+
+---
 
 documenting my journey from  
 **“what’s a linked list?”**  
@@ -14,7 +27,8 @@ so yeah. we grind.
 
 ---
 
-## the mission
+<details>
+<summary><strong>the mission</strong></summary>
 
 solve problems.  
 understand _why_ they work.  
@@ -24,9 +38,12 @@ stop being terrible at this.
 
 **preferably in that order.**
 
+</details>
+
 ---
 
-## where the pain happens
+<details>
+<summary><strong>where the pain happens</strong></summary>
 
 **current platforms:**
 
@@ -37,9 +54,12 @@ stop being terrible at this.
 
 no platform loyalty. only progress.
 
+</details>
+
 ---
 
-## how i organize the chaos
+<details>
+<summary><strong>how i organize the chaos</strong></summary>
 
 ### file naming
 
@@ -55,8 +75,6 @@ examples:
 
 simple. searchable. future-me friendly.  
 no cryptic abbreviations i’ll forget in two weeks.
-
----
 
 ### inside each file
 
@@ -92,9 +110,12 @@ no corporate speak.
 no fake motivation.  
 just what worked, what didn’t, and how long i stared at my screen.
 
+</details>
+
 ---
 
-## the setup
+<details>
+<summary><strong>the setup</strong></summary>
 
 **what i’m running:**
 
@@ -111,9 +132,12 @@ just what worked, what didn’t, and how long i stared at my screen.
 5. click the extension on any problem
 6. it opens in vs code → hit run → dopamine
 
+</details>
+
 ---
 
-## scripts & automation (yes, i really over-engineered this)
+<details>
+<summary><strong>scripts & automation (yes, i really over-engineered this)</strong></summary>
 
 this repo isn’t just a pile of `.py` files. there’s a small automation layer here whose only job is to **remove friction** and make progress visible.
 
@@ -144,8 +168,6 @@ python scripts/new_problem.py <problem_url>
 
 no setup tax. just think.
 
----
-
 ### `TEMPLATE.py`
 
 the blueprint every problem file starts from.
@@ -165,8 +187,6 @@ no imports.
 no assumptions.  
 just structure.
 
----
-
 ### `scripts/update_stats.py`
 
 keeps the README honest.
@@ -184,8 +204,6 @@ keeps the README honest.
 python scripts/update_stats.py
 ```
 
----
-
 ### GitHub Actions (automatic stats updates)
 
 there’s a GitHub Actions workflow that runs on every push.
@@ -200,18 +218,7 @@ so stats stay accurate **without me thinking about it**.
 
 system > motivation.
 
----
-
-## current stats (auto-updated, subject to emotional stability)
-
-| platform      | solved | vibe check |
-| ------------- | ------ | ---------- |
-| geeksforgeeks | 3      | warming up |
-| leetcode      | 2      | we move    |
-| hackerrank    | 0      | tbd        |
-| codeforces    | 0      | lol        |
-
-## _last updated: 2026-01-29_
+</details>
 
 ---
 

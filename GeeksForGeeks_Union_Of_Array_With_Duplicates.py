@@ -4,6 +4,7 @@ difficulty: easy
 topic: sets, arrays
 problem_link: https://www.geeksforgeeks.org/problems/union-of-two-arrays3538/1
 tries: 1
+created: 2026-01-29
 
 notes:
 i tried to use solve it using just the arrays but it was getting too complicated

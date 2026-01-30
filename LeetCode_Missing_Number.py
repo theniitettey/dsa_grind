@@ -4,6 +4,7 @@ difficulty: easy
 topic: math, array
 problem_link: https://leetcode.com/problems/missing-number/description/
 tries: 1
+created: 2026-01-29
 
 notes:
 so we are given an array containing n distinct numbers

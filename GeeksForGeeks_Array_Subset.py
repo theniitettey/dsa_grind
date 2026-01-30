@@ -4,6 +4,7 @@ difficulty: easy
 topic: arrays, hashing, dictionaries, sets
 problem_link: https://www.geeksforgeeks.org/problems/array-subset-of-another-array2317/1
 tries: 1 (used a similar approach as previous problems)
+created: 2026-01-29
 
 notes:
 so basically we need to find out whether b is a subset of a

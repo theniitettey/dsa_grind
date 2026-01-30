@@ -4,6 +4,7 @@ difficulty: easy
 topic: arrays, hashing, dictionaries
 problem_link: https://www.geeksforgeeks.org/problems/check-if-two-arrays-are-equal-or-not3847/1
 tries: 1
+created: 2026-01-29
 
 notes:
 i thought of sorting both arrays and comparing them but that would take O(n log n) time, 
